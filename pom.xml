@@ -38,7 +38,7 @@
 			<optional>true</optional>
 		</dependency>
 		<dependency>
-			<groupId>com.oracle.database.jdbc</groupId>
+			<groupId>com.oracle.jdbc</groupId>
 			<artifactId>ojdbc8</artifactId>
 			<scope>runtime</scope>
 		</dependency>
@@ -56,7 +56,7 @@
 		<!-- oracle jdbc -->			
 		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc8 -->
 		<dependency>
-		    <groupId>com.oracle.database.jdbc</groupId>
+		    <groupId>com.oracle.jdbc</groupId>
 		    <artifactId>ojdbc8</artifactId>
 		    <version>12.2.0.1</version>
 		</dependency>
