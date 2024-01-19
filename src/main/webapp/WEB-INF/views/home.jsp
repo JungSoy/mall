@@ -746,7 +746,6 @@
             </div>
         </div>
     </div>
-<!-- <script src="/resources/js/member/signIn2.js"></script> -->
     <!-- Bootstrap core JavaScript-->
     <script src="/resources/vendor/jquery/jquery.min.js"></script>
     <script src="/resources/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -765,14 +764,9 @@
     <script src="/resources/js/demo/chart-pie-demo.js"></script>
     
         <!--home.js(기능)  -->
-<!--   	<script src="/resources/js/home/home.js"></script> -->
+ 	<script src="/js/home/home.js"></script>
   	
-  	<script>
-  		$("#login-enter").on("click",function(){
-  			console.log("1");
-  		});
   	
-  	</script>
 </body>
 	
 </html>
