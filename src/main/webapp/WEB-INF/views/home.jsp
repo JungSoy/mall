@@ -331,7 +331,7 @@
 
                         <!-- Nav Item - User Information -->
                         <li>
-                        	<a id=login-enter class="collapse-item" href="javascript:void(0);">로그인</a>
+                        	<a id=login-enter class="collapse-item" href="/login;">로그인</a>
                         	<a class="collapse-item" href="register.jsp">회원가입</a>
                         </li>
                         
