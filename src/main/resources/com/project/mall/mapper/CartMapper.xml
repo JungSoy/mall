@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <mapper namespace="com.project.mall.mapper.CartMapper">
+
+	<!-- 카트 추가 -->
+	<insert id="addCart">
+	
+		ISNERT INTO cart(userNo, bookId, cartCount)
+		VALUES(#{userNo}, #{bookId}, #{cartCount}) 
+	
+	</insert>
+	
+	
+	<!-- 카트 삭제 -->
+	<delete id="deleteCart">
+	
+		DELETE FROM cart WHERE cartId = #{cartId}
+	
+	</delete>
+	
+	<!-- 카트 수량 수정 -->
+	<update id="modifyCount">
+	
+		UPDATE cart SET cartCount=#{cartCount} WHERE cartId = #{cartId}
+	
+	</update>
+	
+	
+	<!-- 카트 목록 -->
+	<select id="getCart" resultType="com.project.mall.model.CartVO">
+	
+		SELECT a.cartId, a.userNo, a.bookId, a.cartCount, b.bookName, b.bookPrice, b.bookDiscount
+		FROM cart a LEFT OUTER JOIN book b on a.bookId = b.bookId
+		WHERE userNo = #{userNo}	
+	
+	</select>
+	
+	<!-- 카트 확인 -->
+	<select id="checkCart" resultType="com.project.mall.model.CartVO">
+	
+		SELECT * FROM cart 
+		WHERE userNo = #{userNo} AND bookId = #{bookId}
+	
+	</select>
+	
+	
+	
+  </mapper>
