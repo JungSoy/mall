@@ -330,9 +330,9 @@
                         <div class="topbar-divider d-none d-sm-block"></div>
 
                         <!-- Nav Item - User Information -->
-                        <li>
-                        	<a id=login-enter class="collapse-item" href="/login;">로그인</a>
-                        	<a class="collapse-item" href="register.jsp">회원가입</a>
+                        <li class="pt-4">
+                        	<a id=login-enter class="collapse-item text-gray-600 small mr-2" role="button" href="/login">로그인</a>
+                        	<a class="collapse-item text-gray-600 small" role="button" href="/join">회원가입</a>
                         </li>
                         
                         <!--=================================================================================  -->
