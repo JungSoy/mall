@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html lang="ko">
 
 <head>
@@ -9,7 +12,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Register</title>
+    <title>회원가입</title>
 
     <!-- Custom fonts for this template-->
     <link href="/resources/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
@@ -30,36 +33,60 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+<!--                     <div class="col-lg-5 d-none d-lg-block bg-register-image"></div> -->
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
-                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                <h1 class="h4 text-gray-900 mb-4">회원가입</h1>
                             </div>
                             <form class="user">
                                 <div class="form-group row">
+                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="userId"
+                                            placeholder="아이디 입력">
+                                    </div>
+                                    <div class="col-sm-3">
+ 										<a href="" class="btn btn-primary btn-user btn-block">
+                                    		중복확인
+                                		</a>
+                                    </div>
+                                </div>
+                                  <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="First Name">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleInputPassword" placeholder="비밀번호">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Last Name">
+                                        <input type="password" class="form-control form-control-user"
+                                            id="exampleRepeatPassword" placeholder="비밀번호 확인">
                                     </div>
+                                </div>
+                                 <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="이름">
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Email Address">
+                                        placeholder="이메일 주소">
                                 </div>
                                 <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Password">
+                                    <div class="col-sm-9 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user"
+                                            id="" placeholder="우편번호">
                                     </div>
-                                    <div class="col-sm-6">
-                                        <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repeat Password">
+                                    <div class="col-sm-3">
+								        <a href="" class="btn btn-primary btn-user btn-block">
+			                            	주소검색
+			                           	</a>
                                     </div>
+                                </div>
+                                 <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="주소">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control form-control-user" id="exampleInputEmail"
+                                        placeholder="상세주소">
                                 </div>
                                 <a href="login.html" class="btn btn-primary btn-user btn-block">
                                     Register Account
@@ -81,6 +108,7 @@
                             </div>
                         </div>
                     </div>
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
                 </div>
             </div>
         </div>
