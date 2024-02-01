@@ -16,7 +16,12 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 				  //내부적으로 SpringSecurityFilterChain이 동작하여 URL 필더가 적용됨
 
 public class SecurityConfig{
-	 @Bean
+	
+	
+	
+	
+		//특정http 요청에 대한 웹 기반 보안 구성
+	 	@Bean
 	    SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
 //       authorizeHttpRequests 메서드는 HTTP 요청에 대한 권한 설정을 지정하는 부분
 //	     requestMatchers 는 특정 요청 매처(RequestMatcher)를 지정할 때 사용된다. 
@@ -41,10 +46,12 @@ public class SecurityConfig{
 //
 //		 defaultSuccessUrl 메서드는 로그인 성공 후 이동할 페이지의 URL 을 지정하는 부분이다.
 		 
+		 
+		 
 	        http
 	                .authorizeHttpRequests((authorizeHttpRequests) -> authorizeHttpRequests
 	                        .requestMatchers(new AntPathRequestMatcher("/**")).permitAll()) 
-	                .formLogin((formLogin)-> formLogin 
+	                .formLogin((formLogin)-> formLogin //form기반의 로그인 설정
 	                        .loginPage("/user/login") //로그인페이지 url을 넣을것
 	                        .defaultSuccessUrl("/"))// 로그인 성공 후 리다이렉트할 주소
 	                .logout((logout) -> logout
